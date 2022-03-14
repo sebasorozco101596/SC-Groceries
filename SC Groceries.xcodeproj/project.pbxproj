@@ -11,6 +11,7 @@
 		621E108627E0025300988BAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E108527E0025300988BAE /* ContentView.swift */; };
 		621E108827E0025300988BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621E108727E0025300988BAE /* Assets.xcassets */; };
 		621E108B27E0025300988BAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621E108A27E0025300988BAE /* Preview Assets.xcassets */; };
+		621E109827E0035D00988BAE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E109727E0035D00988BAE /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		621E108527E0025300988BAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		621E108727E0025300988BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		621E108A27E0025300988BAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		621E109727E0035D00988BAE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		621E109927E00A1A00988BAE /* SC-Groceries-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SC-Groceries-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,13 @@
 		621E108227E0025300988BAE /* SC Groceries */ = {
 			isa = PBXGroup;
 			children = (
-				621E108327E0025300988BAE /* SC_GroceriesApp.swift */,
-				621E108527E0025300988BAE /* ContentView.swift */,
+				621E109927E00A1A00988BAE /* SC-Groceries-Info.plist */,
+				621E109127E0032100988BAE /* App */,
+				621E109527E0033900988BAE /* Extension */,
+				621E109627E0033F00988BAE /* Helper */,
+				621E109227E0032700988BAE /* Model */,
+				621E109427E0033100988BAE /* Utility */,
+				621E109327E0032C00988BAE /* View */,
 				621E108727E0025300988BAE /* Assets.xcassets */,
 				621E108927E0025300988BAE /* Preview Content */,
 			);
@@ -65,6 +73,51 @@
 				621E108A27E0025300988BAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		621E109127E0032100988BAE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				621E108327E0025300988BAE /* SC_GroceriesApp.swift */,
+				621E108527E0025300988BAE /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		621E109227E0032700988BAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		621E109327E0032C00988BAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				621E109727E0035D00988BAE /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		621E109427E0033100988BAE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		621E109527E0033900988BAE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		621E109627E0033F00988BAE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621E109827E0035D00988BAE /* HomeView.swift in Sources */,
 				621E108627E0025300988BAE /* ContentView.swift in Sources */,
 				621E108427E0025300988BAE /* SC_GroceriesApp.swift in Sources */,
 			);
@@ -272,9 +326,9 @@
 				DEVELOPMENT_TEAM = AV4T8M55V5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SC-Groceries-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,9 +355,9 @@
 				DEVELOPMENT_TEAM = AV4T8M55V5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SC-Groceries-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
