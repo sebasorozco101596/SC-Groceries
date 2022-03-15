@@ -14,7 +14,17 @@ struct HomeView: View {
     // Current Tab
     @State var currentTab: String = "Home"
     
+    // Menu Option..
+    @State var showMenu: Bool = false
+    
     //MARK: - BODY
+    
+    // Hiding Native Tab Bar...
+    init() {
+        
+        UITabBar.appearance().isHidden = true
+        
+    }
     
     var body: some View {
         
@@ -22,7 +32,12 @@ struct HomeView: View {
             
              // Custom Side Menu...
             SideMenuView(currentTab: $currentTab)
+            
+            // Main Tab View...
+            CustomTabView(currentTab: $currentTab, showMenu: $showMenu)
         }
+        // Always Day Mode...
+        .preferredColorScheme(.light)
     }
 }
 
