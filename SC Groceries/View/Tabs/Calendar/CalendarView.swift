@@ -13,6 +13,7 @@ struct CalendarView: View {
     
     @State var currentDate: Date = Date()
     @State private var showNewDueDateView: Bool = false
+    @Binding var showMenu: Bool
     
     //MARK: - BODY
     
@@ -73,6 +74,13 @@ struct CalendarView: View {
                 NewExpiredDateView(isShowing: $showNewDueDateView)
             }
         } //: ZSTACK
+        .onTapGesture {
+            if showMenu {
+                withAnimation(.easeInOut) {
+                    showMenu.toggle()
+                }
+            }
+        }
     }
 }
 
@@ -80,6 +88,6 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        ContentView()
     }
 }

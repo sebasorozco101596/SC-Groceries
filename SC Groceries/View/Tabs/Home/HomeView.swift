@@ -11,10 +11,23 @@ struct HomeView: View {
     
     //MARK: - PROPERTIES
     
+    @Binding var showMenu: Bool
+    
     //MARK: - BODY
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            Color.white
+            Text("Heyyyyyyy")
+        }
+        .onTapGesture {
+            if showMenu {
+                withAnimation(.easeInOut) {
+                    showMenu.toggle()
+                }
+            }
+        }
     }
 }
 
@@ -22,6 +35,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ContentView()
     }
 }

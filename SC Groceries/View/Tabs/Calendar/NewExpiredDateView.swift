@@ -49,6 +49,11 @@ struct NewExpiredDateView: View {
             Spacer()
             
             VStack(spacing: 16) {
+                
+                Text("24 March 2022")
+                    .font(.title3.bold())
+                    .foregroundColor(Color("Orange"))
+                
                 TextField("Grocery", text: $task)
                     .foregroundColor(.pink)
                     .font(.system(size: 20, weight: .bold))

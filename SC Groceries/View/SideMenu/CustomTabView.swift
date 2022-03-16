@@ -70,10 +70,10 @@ struct CustomTabView: View {
             
             TabView(selection: $currentTab) {
                 
-                Text("Home")
+                HomeView(showMenu: $showMenu)
                     .tag("Home")
                 
-                CalendarView()
+                CalendarView(showMenu: $showMenu)
                     .tag("Calendar")
                 
                 Text("Missing Groceries")

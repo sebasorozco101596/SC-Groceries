@@ -229,7 +229,7 @@ struct CustomDatePickerView: View {
 
 struct CustomDatePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(showMenu: .constant(false))
     }
 }
 
