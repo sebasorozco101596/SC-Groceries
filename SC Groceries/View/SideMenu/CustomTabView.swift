@@ -16,8 +16,6 @@ struct CustomTabView: View {
     
     //MARK: - BODY
     
-    
-    
     var body: some View {
         
         VStack {
@@ -28,12 +26,19 @@ struct CustomTabView: View {
                 // Menu Button...
                 Button {
                     
+                    // Toggling Menu Option...
+                    withAnimation(.spring()) {
+                        showMenu = true
+                    }
+                    
                 } label: {
                     
                     Image(systemName: "line.3.horizontal.decrease")
                         .font(.title2)
                         .foregroundColor(.black)
                 } //: BUTTON
+                // Hidding when Menu is Visible...
+                .opacity(showMenu ? 0 : 1)
                 
                 Spacer()
                 
@@ -47,17 +52,28 @@ struct CustomTabView: View {
                         .aspectRatio(contentMode: .fill)
                         .foregroundColor(.black)
                 }
-
-
+                
+                
             } //: HSTACK
+            // Page Title...
+            .overlay(
+                
+                Text(currentTab)
+                    .font(.title2.bold())
+                    .foregroundColor(.black)
+                // Same Hidding when menu is Visible...
+                    .opacity(showMenu ? 0 : 1)
+            )
             .padding([.horizontal, .top])
+            .padding(.bottom, 8)
+            .padding(.top, getSafeArea().top)
             
             TabView(selection: $currentTab) {
                 
                 Text("Home")
                     .tag("Home")
                 
-                Text("Calendar")
+                CalendarView()
                     .tag("Calendar")
                 
                 Text("Missing Groceries")
@@ -78,6 +94,30 @@ struct CustomTabView: View {
             } //: TABVIEW
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay(
+            
+            // Close Button...
+            Button {
+                
+                // Toggling Menu Option...
+                withAnimation(.spring()) {
+                    showMenu = false
+                }
+                
+            } label: {
+                
+                Image(systemName: "xmark")
+                    .font(.title2)
+                    .foregroundColor(.black)
+            } //: BUTTON
+            // Hidding when Menu is Visible...
+                .opacity(showMenu ? 1 : 0)
+                .padding()
+                .padding(.top)
+            
+            , alignment: .topLeading
+            
+        )
         .background(
             Color("Green")
         )

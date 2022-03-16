@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct MainView: View {
     
     //MARK: - PROPERTIES
     
@@ -35,6 +35,13 @@ struct HomeView: View {
             
             // Main Tab View...
             CustomTabView(currentTab: $currentTab, showMenu: $showMenu)
+            // Appling Corner Radious...
+                .cornerRadius(showMenu ? 25 : 0)
+            // Making 3D rotation...
+                .rotation3DEffect(.init(degrees: showMenu ? -15 : 0), axis: (x: 0, y: 1, z: 0), anchor: .trailing)
+            // Moving View appart...
+                .offset(x: showMenu ? getRect().width / 2 : 0)
+                .ignoresSafeArea()
         }
         // Always Day Mode...
         .preferredColorScheme(.light)
@@ -43,8 +50,8 @@ struct HomeView: View {
 
 //MARK: - PREVIEW
 
-struct HomeView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        MainView()
     }
 }

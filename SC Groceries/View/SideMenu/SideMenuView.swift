@@ -68,7 +68,7 @@ struct SideMenuView: View {
                     
                 } //: VSTACK
                 .padding()
-                .padding(.top, 60)
+                .padding(.top, 45)
             })
             
             // Max width of screen width...
